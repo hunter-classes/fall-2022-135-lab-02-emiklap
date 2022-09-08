@@ -1,5 +1,25 @@
 #include <iostream>
 
+bool update_array(int array[10]);
+void print_array(int array[10]);
+
+int main()
+{
+	int myData[10];
+	bool cont = true;
+
+	for (int i = 0; i < 10; i++)
+	{
+		myData[i] = 1;
+	}
+
+	while (cont == true)
+	{
+		print_array(myData);
+		cont = update_array(myData);
+	} 
+}
+
 bool update_array(int array[10])
 {
 	int index, val;
@@ -30,21 +50,4 @@ void print_array(int array[10])
 		std::cout << array[i] << " ";
 	}
 	std::cout << "\n";
-}
-
-int main()
-{
-	int myData[10];
-	bool cont = true;
-
-	for (int i = 0; i < 10; i++)
-	{
-		myData[i] = 1;
-	}
-
-	while (cont == true)
-	{
-		print_array(myData);
-		cont = update_array(myData);
-	} 
 }
